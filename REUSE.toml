@@ -23,7 +23,9 @@ path = [
     ".releaserc.yml",
     ".cspell.json",
     ".jscpd.json",
-    ".mega-linter.yml"
+    ".mega-linter.yml",
+  ".luacheckrc",
+  ".luarc.json"
 ]
 precedence = "override"
 SPDX-FileCopyrightText = "2024 Ali Sajid Imami"

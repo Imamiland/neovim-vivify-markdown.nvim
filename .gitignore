@@ -1,1 +1,3 @@
 /plugin/reload.vim
+deps/
+.ci
