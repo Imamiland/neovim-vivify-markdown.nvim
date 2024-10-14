@@ -1,3 +1,7 @@
+" SPDX-FileCopyrightText: 2024 Ali Sajid Imami
+"
+" SPDX-License-Identifier: MIT
+
 if exists('g:loaded_neovim-vivify-markdown') | finish | endif
 
 " expose vim commands and interface here
