@@ -1,0 +1,1 @@
+local config = require("neovim-vivify-markdown.config")
