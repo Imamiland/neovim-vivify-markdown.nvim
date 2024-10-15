@@ -14,11 +14,12 @@ test: deps
 # installs `mini.nvim`, used for both the tests and documentation.
 deps:
     #!/usr/bin/env sh
+    set -euo pipefail
     if [ -d deps/mini.nvim ]; then
-    cd deps/mini.nvim && git pull
+      cd deps/mini.nvim && git pull
     else
-    @mkdir -p deps
-    git clone --depth 1 https://github.com/echasnovski/mini.nvim deps/mini.nvim
+      @mkdir -p deps
+      git clone --depth 1 https://github.com/echasnovski/mini.nvim deps/mini.nvim
     fi
 
 # installs deps before running tests, useful for the CI.
@@ -37,25 +38,38 @@ lint:
     luacheck plugin/ lua/
 
 luals-ci:
+    #!/bin/env sh
+    set -euo pipefail
     rm -rf .ci/lua-ls/log
     lua-language-server --configpath .luarc.json --logpath .ci/lua-ls/log --check .
-    [ -f .ci/lua-ls/log/check.json ] && { cat .ci/lua-ls/log/check.json 2>/dev/null; exit 1; } || true
+    if [ -f .ci/lua-ls/log/check.json ]; then
+        if ! jq -e '. == []' .ci/lua-ls/log/check.json > /dev/null; then
+            cat .ci/lua-ls/log/check.json 2>/dev/null
+            exit 1
+        fi
+    fi
 
 luals:
     mkdir -p .ci/lua-ls
     curl -sL "https://github.com/LuaLS/lua-language-server/releases/download/3.7.4/lua-language-server-3.7.4-darwin-x64.tar.gz" | tar xzf - -C "${PWD}/.ci/lua-ls"
-    make luals-ci
+    just luals-ci
 
-# setup
-setup:
-    ./scripts/setup.sh
+download-neovim version:
+    # Download and use Neovim specified version
+    mkdir -p ./nvim/${version}
+    curl -L https://github.com/neovim/neovim/releases/download/${version}/nvim-macos.tar.gz -o ./nvim/${version}/nvim-macos.tar.gz
+    tar xzf ./nvim/${version}/nvim-macos.tar.gz -C ./nvim/${version} --strip-components=1
 
-# runs all the test files on the nightly version, `bob` must be installed.
+test version:
+    just download-neovim ${version}
+    ./nvim/${version}/bin/nvim --version
+    PATH=./nvim/${version}/bin:$PATH just test
+
 test-nightly:
-    bob use nightly
-    make test
+    just test nightly
 
-# runs all the test files on the 0.8.3 version, `bob` must be installed.
-test-083:
-    bob use 0.8.3
-    make test
+test-stable:
+    just test stable
+
+test-0-8-3:
+    just test v0.8.3
