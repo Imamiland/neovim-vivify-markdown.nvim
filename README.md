@@ -5,7 +5,7 @@ SPDX-License-Identifier: MIT
 -->
 
 <p align="center">
-  <h1 align="center">YOUR_REPOSITORY_NAME</h2>
+  <h1 align="center">my-awesome-plugin.nvim</h2>
 </p>
 
 <p align="center">
@@ -53,9 +53,9 @@ _[GIF version of the showcase video for mobile users](SHOWCASE_GIF_LINK)_
 
 ```lua
 -- stable version
-use {"YOUR_REPOSITORY_NAME", tag = "*" }
+use {"my-awesome-plugin.nvim", tag = "*" }
 -- dev version
-use {"YOUR_REPOSITORY_NAME"}
+use {"my-awesome-plugin.nvim"}
 ```
 
 </td>
@@ -70,9 +70,9 @@ use {"YOUR_REPOSITORY_NAME"}
 
 ```lua
 -- stable version
-Plug "YOUR_REPOSITORY_NAME", { "tag": "*" }
+Plug "my-awesome-plugin.nvim", { "tag": "*" }
 -- dev version
-Plug "YOUR_REPOSITORY_NAME"
+Plug "my-awesome-plugin.nvim"
 ```
 
 </td>
@@ -87,9 +87,9 @@ Plug "YOUR_REPOSITORY_NAME"
 
 ```lua
 -- stable version
-require("lazy").setup({{"YOUR_REPOSITORY_NAME", version = "*"}})
+require("lazy").setup({{"my-awesome-plugin.nvim", version = "*"}})
 -- dev version
-require("lazy").setup({"YOUR_REPOSITORY_NAME"})
+require("lazy").setup({"my-awesome-plugin.nvim"})
 ```
 
 </td>
@@ -109,11 +109,11 @@ require("lazy").setup({"YOUR_REPOSITORY_NAME"})
 <details>
 <summary>Click to unfold the full list of options with their default values</summary>
 
-> **Note**: The options are also available in Neovim by calling `:h your-plugin-name.options`
+> **Note**: The options are also available in Neovim by calling `:h my-awesome-plugin.options`
 
 ```lua
-require("your-plugin-name").setup({
-    -- you can copy the full list from lua/your-plugin-name/config.lua
+require("my-awesome-plugin").setup({
+    -- you can copy the full list from lua/my-awesome-plugin/config.lua
 })
 ```
 
@@ -131,7 +131,7 @@ PRs and issues are always welcome. Make sure to provide as much context as possi
 
 ## 🗞 Wiki
 
-You can find guides and showcase of the plugin on [the Wiki](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/wiki)
+You can find guides and showcase of the plugin on [the Wiki](https://github.com/aimami/my-awesome-plugin.nvim/wiki)
 
 ## 🎭 Motivations
 

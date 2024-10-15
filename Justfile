@@ -13,8 +13,13 @@ test: deps
 
 # installs `mini.nvim`, used for both the tests and documentation.
 deps:
+    #!/usr/bin/env sh
+    if [ -d deps/mini.nvim ]; then
+    cd deps/mini.nvim && git pull
+    else
     @mkdir -p deps
     git clone --depth 1 https://github.com/echasnovski/mini.nvim deps/mini.nvim
+    fi
 
 # installs deps before running tests, useful for the CI.
 test-ci: deps test
