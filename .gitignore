@@ -1,1 +1,4 @@
+!scripts/
 /plugin/reload.vim
+deps/
+.ci
