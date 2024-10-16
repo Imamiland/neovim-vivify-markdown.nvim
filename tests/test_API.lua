@@ -24,18 +24,18 @@ local T = MiniTest.new_set({
 T["setup()"] = MiniTest.new_set()
 
 T["setup()"]["sets exposed methods and default options value"] = function()
-    child.lua([[require('neovim-vivify-plugin').setup()]])
+    child.lua([[require('neovim-vivify-markdown').setup()]])
 
     -- global object that holds your plugin information
-    Helpers.expect.global_type(child, "_G.NeovimVivifyPlugin", "table")
+    Helpers.expect.global_type(child, "_G.NeovimVivifyMarkdown", "table")
 
     -- public methods
-    Helpers.expect.global_type(child, "_G.NeovimVivifyPlugin.toggle", "function")
-    Helpers.expect.global_type(child, "_G.NeovimVivifyPlugin.disable", "function")
-    Helpers.expect.global_type(child, "_G.NeovimVivifyPlugin.enable", "function")
+    Helpers.expect.global_type(child, "_G.NeovimVivifyMarkdown.toggle", "function")
+    Helpers.expect.global_type(child, "_G.NeovimVivifyMarkdown.disable", "function")
+    Helpers.expect.global_type(child, "_G.NeovimVivifyMarkdown.enable", "function")
 
     -- config
-    Helpers.expect.global_type(child, "_G.NeovimVivifyPlugin.config", "table")
+    Helpers.expect.global_type(child, "_G.NeovimVivifyMarkdown.config", "table")
 
     -- assert the value, and the type
     Helpers.expect.config(child, "debug", false)
@@ -43,7 +43,7 @@ T["setup()"]["sets exposed methods and default options value"] = function()
 end
 
 T["setup()"]["overrides default values"] = function()
-    child.lua([[require('neovim-vivify-plugin').setup({
+    child.lua([[require('neovim-vivify-markdown').setup({
         -- write all the options with a value different than the default ones
         debug = true,
     })]])
