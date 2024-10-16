@@ -33,21 +33,32 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: v0.20.0 # NOTE: we recommend pinning to a specific version in case of formatting changes
           # CLI arguments
-          args: --check .
+          args: --check lua/
 
   test:
     name: Run Neovim Tests
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        neovim_version:
+          - nightly
+          - stable
+          - v0.10.2
+          - v0.9.5
+          - v0.8.3
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Neovim
-        run: |
-          sudo apt-get update
-          sudo apt-get install neovim -y
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: ${{ matrix.neovim_version}}
+
+      - uses: extractions/setup-just@v1
+        with:
+          just-version: 1.36.0  # optional semver specification, otherwise latest
 
       - name: Run tests
-        run: |
-          nvim --headless -c "lua require('your_test_module').run_tests()" -c "q"
+        run: just test
