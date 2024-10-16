@@ -24,7 +24,7 @@ deps:
     if [ -d deps/mini.nvim ]; then
       cd deps/mini.nvim && git pull
     else
-      @mkdir -p deps
+      mkdir -p deps
       git clone --depth 1 https://github.com/echasnovski/mini.nvim deps/mini.nvim
     fi
 
