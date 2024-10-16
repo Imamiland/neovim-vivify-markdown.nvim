@@ -86,3 +86,11 @@ test-stable:
 # Test against the v0.8.3 version of Neovim
 test-0-8-3:
     just _test-version v0.8.3
+
+# Test against the v0.9.5 version of Neovim
+test-0-9-5:
+    just _test-version v0.9.5
+
+# Test against the v0.8.3 version of Neovim
+test-0-10-2:
+    just _test-version v0.10.2
