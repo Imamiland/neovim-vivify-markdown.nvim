@@ -61,3 +61,11 @@ path = [
 precedence = "override"
 SPDX-FileCopyrightText = "2024 Ali Sajid Imami"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = [
+  "doc/*",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2024 Ali Sajid Imami"
+SPDX-License-Identifier = "MIT"

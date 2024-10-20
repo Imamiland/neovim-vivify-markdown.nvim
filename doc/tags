@@ -1,0 +1,5 @@
+NeovimVivifyMarkdown.disable()  neovim-vivify-markdown.txt  /*NeovimVivifyMarkdown.disable()*
+NeovimVivifyMarkdown.enable()   neovim-vivify-markdown.txt  /*NeovimVivifyMarkdown.enable()*
+NeovimVivifyMarkdown.options    neovim-vivify-markdown.txt  /*NeovimVivifyMarkdown.options*
+NeovimVivifyMarkdown.setup()    neovim-vivify-markdown.txt  /*NeovimVivifyMarkdown.setup()*
+NeovimVivifyMarkdown.toggle()   neovim-vivify-markdown.txt  /*NeovimVivifyMarkdown.toggle()*
