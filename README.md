@@ -18,21 +18,19 @@ SPDX-License-Identifier: MIT
 
 <!--<div align="center">-->
 <!---->
-<!--> Videos don't work on GitHub mobile, so a GIF alternative can help users.-->
+<!--  > Videos don't work on GitHub mobile, so a GIF alternative can help users.-->
 <!---->
 <!--_[GIF version of the showcase video for mobile users](SHOWCASE_GIF_LINK)_-->
 <!---->
 <!--</div>-->
 
-## ⚡️ Features
-
-> Write short sentences describing your plugin features
+## Features
 
 - Quickly render a markdown file to a browser
 - Render other file types that are supported by [Vivify](https://github.com/jannis-baum/vivify)
 - Optional integration with [Mason](https://github.com/williamboman/mason.nvim)
 
-## 📋 Installation
+## Installation
 
 <div align="center">
 <table>
@@ -53,7 +51,7 @@ SPDX-License-Identifier: MIT
 
 ```lua
 -- stable version
-use {"neovim-vivify-markdown.nvim", tag = "*" }
+use {"neovim-vivify-markdown.nvim", tag = "stable" }
 -- dev version
 use {"neovim-vivify-markdown.nvim"}
 ```
@@ -70,7 +68,7 @@ use {"neovim-vivify-markdown.nvim"}
 
 ```lua
 -- stable version
-Plug "neovim-vivify-markdown.nvim", { "tag": "*" }
+Plug "neovim-vivify-markdown.nvim", { "tag": "stable" }
 -- dev version
 Plug "neovim-vivify-markdown.nvim"
 ```
@@ -87,7 +85,7 @@ Plug "neovim-vivify-markdown.nvim"
 
 ```lua
 -- stable version
-require("lazy").setup({{"neovim-vivify-markdown.nvim", version = "*"}})
+require("lazy").setup({{"neovim-vivify-markdown.nvim", version = "stable"}})
 -- dev version
 require("lazy").setup({"neovim-vivify-markdown.nvim"})
 ```
@@ -98,18 +96,20 @@ require("lazy").setup({"neovim-vivify-markdown.nvim"})
 </table>
 </div>
 
-## ☄ Getting started
+## Getting started
 
-> Describe how to use the plugin the simplest way
+This is a simple plugin for [neovim](https://www.neovim.io) to integrate the extremely capable [Vivify](https://github.com/jannis-baum/vivify) markdown renderer seamlessly in your NeoVim config. This allows you to use a single keystroke to create a live rendering of the markdown file.
 
-## ⚙ Configuration
+The plugin can be installed by using the desired plugin manager as shown in [Installation](#Installation). The plugin comes with a set of default keybindings that can be used by default without configuration. Otherwise, all [configuration options](#Configuration) are given below.
+
+## Configuration
 
 > The configuration list sometimes become cumbersome, making it folded by default reduce the noise of the README file.
 
 <details>
 <summary>Click to unfold the full list of options with their default values</summary>
 
-> **Note**: The options are also available in Neovim by calling `:h neovim-vivify-markdown.options`
+> **Note**: The options are also available in neovim by calling `:h neovim-vivify-markdown.options`
 
 ```lua
 require("neovim-vivify-markdown").setup({
@@ -119,20 +119,20 @@ require("neovim-vivify-markdown").setup({
 
 </details>
 
-## 🧰 Commands
+## Commands
 
 | Command   | Description         |
 | --------- | ------------------- |
 | `:Toggle` | Enables the plugin. |
 
-## ⌨ Contributing
+## Contributing
 
 We welcome all contributions. Please look at [CONTRIBUTING](CONTRIBUTING.md) to see more information about how to contribute to the project.
 
-## 🎭 Motivations
+## Motivations
 
 > If alternatives of your plugin exist, you can provide some pros/cons of using yours over the others.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSES/MIT.txt). Some ancillary files are licensed under the [Creative Commons Zero](LICENSES/CC0-1.0.txt) and are dedicated to the Public Domain.
+This project is licensed under the [MIT License](LICENSES/MIT.txt). Some ancillary files are licensed under the [Creative Commons Zero](LICENSES/CC0-1.0.txt) License and are dedicated to the Public Domain.
