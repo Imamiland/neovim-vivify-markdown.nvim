@@ -130,4 +130,6 @@ repos:
           name: Selene Lint
           language: system
           entry: selene
+          types:
+            - lua
           files: \.lua$
