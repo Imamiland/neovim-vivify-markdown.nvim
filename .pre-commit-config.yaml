@@ -114,6 +114,7 @@ repos:
       rev: 38.124.0
       hooks:
         - id: renovate-config-validator
+          language_version: 20.17.0
 
     - repo: https://github.com/Calinou/pre-commit-luacheck
       rev: v1.0.0
