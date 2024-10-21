@@ -9,7 +9,7 @@ SPDX-License-Identifier: MIT
 </p>
 
 <p align="center">
-    > Easily render markdown files in neovim
+    Easily render markdown files in neovim
 </p>
 
 <!--<div align="center">-->
@@ -131,8 +131,8 @@ We welcome all contributions. Please look at [CONTRIBUTING](CONTRIBUTING.md) to 
 
 ## Motivations
 
-> If alternatives of your plugin exist, you can provide some pros/cons of using yours over the others.
+This project is heavily inspired by the neovim plugin by [https://github.com/iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) and [https://github.com/jannis-baum/vivify.vim](https://github.com/jannis-baum/vivify.vim). Of course, it would not exist without [Vivify](https://github.com/jannis-baum/vivify).
 
 ## License
 
-This project is licensed under the [MIT License](LICENSES/MIT.txt). Some ancillary files are licensed under the [Creative Commons Zero](LICENSES/CC0-1.0.txt) License and are dedicated to the Public Domain.
+This project is licensed under the [MIT License](LICENSES/MIT.txt). Some ancillary files are licensed under the [Creative Commons Zero](LICENSES/CC0-1.0.txt) and are dedicated to the Public Domain.
