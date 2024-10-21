@@ -12,6 +12,15 @@ SPDX-License-Identifier: MIT
     Easily render markdown files in neovim
 </p>
 
+![License](https://img.shields.io/github/license/Imamiland/neovim-vivify-markdown.nvim)
+![Neovim Version](https://img.shields.io/badge/Neovim-0.8%20%7C%200.9%20%7C%20latest-blue)
+![CI](https://github.com/Imamiland/neovim-vivify-markdown.nvim/actions/workflows/ci.yml/badge.svg)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Imamiland/neovim-vivify-markdown.nvim)
+![GitHub Repo stars](https://img.shields.io/github/stars/Imamiland/neovim-vivify-markdown.nvim)
+![code style: stylua](https://img.shields.io/badge/code%20style-stylua-blue)
+[![REUSE status](https://api.reuse.software/badge/github.com/Imamiland/neovim-vivify-markdown.nvim)](https://api.reuse.software/info/github.com/Imamiland/neovim-vivify-markdown.nvim)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/9597/badge)](https://bestpractices.coreinfrastructure.org/projects/9597)
+
 <!--<div align="center">-->
 <!--    > Drag your video (<10MB) here to host it for free on GitHub.-->
 <!--</div>-->
